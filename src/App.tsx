@@ -13,7 +13,7 @@ function App() {
 	return (
 			<CanvasContainer>
 				<Canvas>
-					<Suspense fallback={<h1>loading</h1>}>
+					<Suspense fallback={[]}>
 						<Earth />
 					</Suspense>
 				</Canvas>

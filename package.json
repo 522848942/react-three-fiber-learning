@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.23"
+    "@types/styled-components": "^5.1.23",
+    "@types/three": "^0.137.0"
   }
 }
