@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Canvas } from "@react-three/fiber"
+import { Suspense } from 'react'
+import Earth from './components/earth';
+import styled from 'styled-components'
+
+const CanvasContainer = styled.div`
+	width: 100%;
+	height: 100%;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+			<CanvasContainer>
+				<Canvas>
+					<Suspense fallback={<h1>loading</h1>}>
+						<Earth />
+					</Suspense>
+				</Canvas>
+			</CanvasContainer>
+	);
 }
 
 export default App;
